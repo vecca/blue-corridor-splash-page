@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Raleway:ital,wght@0,600;1,600&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  display: grid;
+  grid-template-areas: "hero";
+  place-items: center;
+  height: 100vh;
+  max-height: 850px;
+  background: rgb(24, 51, 136);
+  background: radial-gradient(circle, rgba(24, 51, 136, 0.8) 0%, rgba(9, 9, 121, 0.8) 50%, rgba(2, 0, 36, 1) 100%);
+  overflow: hidden;
+}
+
+header > * {
+  grid-area: hero;
+}
+
+header .hero--content {
+  z-index: 1;
+  text-align: center;
+  color: #fffffe;
+  min-width: 30ch;
+  padding: 1rem;
+}
+
+header .hero--content .hero--title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3rem;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+}
+
+header .hero--content .hero--brow {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+header .hero--content .hero--subtitle {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+header img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  max-height: 850px;
+  filter: grayscale();
+}
