@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  // font-size: calc(15px + 0.39063vw);
 }
 body {
   margin: 0;
@@ -12,12 +13,21 @@ body {
   font-style: normal;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
+}
+
 header {
   display: grid;
   grid-template-areas: "hero";
   place-items: center;
   height: 100vh;
-  max-height: 850px;
   background: rgb(24, 51, 136);
   background: radial-gradient(circle, rgba(24, 51, 136, 0.7) 0%, rgba(9, 9, 121, 0.8) 50%, rgba(2, 0, 36, 1) 100%);
   overflow: hidden;
@@ -37,12 +47,12 @@ header .hero--content {
 
 header .hero--content .hero--title {
   font-family: "Orbitron", sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
-  letter-spacing: 2rem;
+  letter-spacing: 1rem;
 }
 
 header .hero--content .hero--brow {
@@ -56,12 +66,26 @@ header .hero--content .hero--subtitle {
   letter-spacing: 0.1rem;
 }
 
+header .hero--content .hero--subtitle .break-lg {
+  display: none;
+}
+
 header img {
   -o-object-fit: cover;
   object-fit: cover;
   height: 100%;
   width: 100%;
   z-index: -1;
-  max-height: 850px;
   filter: grayscale();
+}
+
+@media (min-width: 600px) {
+  header .hero--content .hero--title {
+    font-size: 3rem;
+    letter-spacing: 2rem;
+  }
+
+  header .hero--content .hero--subtitle .break-lg {
+    display: block;
+  }
 }
