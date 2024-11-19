@@ -79,6 +79,10 @@ header img {
   filter: grayscale();
 }
 
+.hero--contact {
+  color: #fffffe;
+}
+
 @media (min-width: 600px) {
   header .hero--content .hero--title {
     font-size: 3rem;
